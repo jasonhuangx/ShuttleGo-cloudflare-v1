@@ -482,7 +482,7 @@ footer{
   background:var(--text-dark);color:rgba(255,255,255,0.6);
   padding:40px 5vw;text-align:center;font-size:0.8rem;
 }
-[data-theme="dark"] footer{background:#08080f;}
+[data-theme="dark"] footer{background:#161628;}
 footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:10px;}
 /* ANIMATIONS */
 .fade-up{opacity:0;transform:translateY(40px);transition:opacity 0.7s ease,transform 0.7s ease;}
@@ -701,7 +701,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
               <button class="carousel-dot active clickable" onclick="goSlide('s',0)"></button>
               <button class="carousel-dot clickable" onclick="goSlide('s',1)"></button>
               <button class="carousel-arrow clickable" onclick="slideMap('s',1)">›</button>
-              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_label">Sydney · Badminton Activies</span>
+              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_label">Sydney · Badminton Activities</span>
             </div>
           </div>
         </div>
@@ -1475,7 +1475,7 @@ document.querySelectorAll('.fade-up').forEach(el=>{
 
 // ========== CAROUSEL ==========
 const slideLabels = {
-  s: ['Sydney · Badminton Activies','Melbourne · Pickleball Activies'],
+  s: ['Sydney · Badminton Activities','Melbourne · Pickleball Activities'],
   v: ['Adelaide · Badminton Venues','Brisbane · Pickleball Venues']
 };
 const slideIdx = {s:0, v:0};
@@ -1488,9 +1488,9 @@ function goSlide(key,idx){
   slideIdx[key]=idx;
 }
 function slideMap(key,dir){
-  console.log('s slides:', document.querySelectorAll('[id^="slide_s"]').length);
-console.log('v slides:', document.querySelectorAll('[id^="slide_v"]').length);
-console.log('slideIdx:', slideIdx);
+//   console.log('s slides:', document.querySelectorAll('[id^="slide_s"]').length);
+// console.log('v slides:', document.querySelectorAll('[id^="slide_v"]').length);
+// console.log('slideIdx:', slideIdx);
   const slides = document.querySelectorAll(`[id^="slide_${key}"]`);
   let next = (slideIdx[key]+dir+slides.length)%slides.length;
   goSlide(key,next);
