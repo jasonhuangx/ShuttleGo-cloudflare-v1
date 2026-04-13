@@ -61,7 +61,28 @@ body {
   grid-template-columns: 1fr min(1400px, 100%) 1fr;
   min-height: 100vh;
 }
-
+.pickleball-small-img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.shuttlecock-img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+.pickleball-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  vertical-align: middle;
+}
+/* 不同位置的尺寸 */
+.feature-icon .pickleball-img { width: 28px; height: 28px; }
+.product-emoji .pickleball-img { width: 50px; height: 50px; }
+.tab-btn .pickleball-img { width: 18px; height: 18px; margin-right: 6px; }
 /* 内容面板 - 所有主要内容放在这里面 */
 .main-panel {
   grid-column: 2 / 3;
@@ -612,7 +633,9 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
         <!-- Feature 1: Session Finder -->
         <div class="feature-card fade-up">
           <div class="feature-header">
-            <div class="feature-icon blue">🔍</div>
+            <div class="feature-icon orange">
+              <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+            </div>
             <div class="feature-title" data-i18n="f1_title">Session Finder</div>
             <div class="feature-desc" data-i18n="f1_desc">Find nearby badminton and pickleball sessions in real time. Filter by skill level, distance, date, and sport type.</div>
           </div>
@@ -657,13 +680,13 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
                     <div class="map-user" style="top:45%;left:50%;">👤</div>
                     <div class="map-bubble" style="top:11%;left:10%;animation-delay:0.2s;">
                       <div class="dist">📍 2.1 km away</div>
-                      <div class="venue-name">🔍 Pickleball @ Alphington Sports Centre</div>
+                      <div class="venue-name"><img src="pickleball-small-200.png" class="pickleball-small-img" alt=""> Pickleball @ Alphington Sports Centre</div>
                       <div class="detail">Open Play · Sat 9am · 3 courts<br>12 players needed <br> All level welcome 🌟</div>
                       <span class="badge badge-orange" style="margin-top:4px;display:inline-block;">Pickleball</span>
                     </div>
                     <div class="map-bubble" style="bottom:4%;right:5%;animation-delay:0.4s;">
                       <div class="dist">📍 4.5 km away</div>
-                      <div class="venue-name">🔍 Competitive Round Robin @ MSAC</div>
+                      <div class="venue-name"><img src="pickleball-small-200.png" class="pickleball-small-img" alt=""> Competitive Round Robin @ MSAC</div>
                       <div class="detail">Tournament Style · Sun 2pm · 6 courts<br>Intermediate–Advanced</div>
                       <span class="badge badge-blue" style="margin-top:4px;display:inline-block;">Rated</span>
                     </div>
@@ -733,17 +756,17 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
                     <div class="map-user" style="top:50%;left:42%;">👤</div>
                     <div class="map-bubble" style="top:2%;left:48%;animation-delay:0.2s;">
                       <div class="dist">📍 2.6 km</div>
-                      <div class="venue-name">🔍 Brisbane Pickleball Club</div>
+                      <div class="venue-name"><img src="pickleball-small-200.png" class="pickleball-small-img" alt=""> Brisbane Pickleball Club</div>
                       <div class="detail">Coorparoo QLD 4151<br><span style="color:#22aa44;font-weight:700;">● Open Now</span> · 4 courts</div>
                     </div>
                     <div class="map-bubble" style="bottom:4%;left:3%;animation-delay:0.4s;">
                       <div class="dist">📍 0.8 km</div>
-                      <div class="venue-name">🔍 RNA Showgrounds Courts</div>
+                      <div class="venue-name"><img src="pickleball-small-200.png" class="pickleball-small-img" alt=""> RNA Showgrounds Courts</div>
                       <div class="detail">Bowen Hills QLD 4006<br><span style="color:#22aa44;font-weight:700;">● Open Now</span> · 6 courts</div>
                     </div>
                     <div class="map-bubble" style="bottom:3%;right:2%;animation-delay:0.4s;">
                       <div class="dist">📍 21.8 km</div>
-                      <div class="venue-name">🔍 Grand Slam Pickleball</div>
+                      <div class="venue-name"><img src="pickleball-small-200.png" class="pickleball-small-img" alt=""> Grand Slam Pickleball</div>
                       <div class="detail">The Gap QLD 4061<br><span style="color:#cc3333;font-weight:700;">● Closed</span> · Opens 7am</div>
                     </div>
                     <div class="map-dot" style="top:20%;left:62%;background:var(--orange);"></div>
@@ -824,8 +847,10 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
                 <div style="font-size:0.72rem;color:var(--text-light);">Labour / Yonex / General</div>
                 <div style="color:var(--orange);font-weight:700;font-size:0.85rem;margin-top:4px;">Up to 50% off</div>
               </div>
-              <div style="background:var(--bg-section);border-radius:12px;padding:14px;border:1px solid var(--border);text-align:center;">
-                <div style="font-size:1.6rem;margin-bottom:8px;">🔍</div>
+              <div style="background:var(--bg-section);border-radius:12px;padding:14px;border:1px solid var(--border);text-align:center;">               
+                 <div >
+                  <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+                </div>
                 <div style="font-weight:700;font-size:0.8rem;color:var(--text-dark);" data-i18n="f4_pickle">Pickleball Gear</div>
                 <div style="font-size:0.72rem;color:var(--text-light);">Paddles & balls</div>
                 <div style="color:var(--orange);font-weight:700;font-size:0.85rem;margin-top:4px;">30% off w/ Token</div>
@@ -928,7 +953,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
 
       <div class="tab-bar">
         <button class="tab-btn active clickable" onclick="switchTab('badminton')" id="tab_badminton" data-i18n="tab_bad">🏸 Badminton</button>
-        <button class="tab-btn clickable" onclick="switchTab('pickleball')" id="tab_pickleball" data-i18n="tab_pick">🔍 Pickleball</button>
+        <button class="tab-btn clickable" onclick="switchTab('pickleball')" id="tab_pickleball" data-i18n="tab_pick"><img src="pickleball-small-200.png" class="pickleball-img" alt=""> Pickleball</button>
       </div>
 
       <!-- Badminton Tab -->
@@ -936,28 +961,36 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
         <h3 class="shop-section-title" data-i18n="shop_shuttles">🏸 Shuttlecocks</h3>
         <div class="products-grid">
           <div class="product-card fade-up">
-            <div class="product-emoji">🏸</div>
+            <div  style="margin-bottom: 12px;">
+              <img src="shuttlecock-vertical-48.png" class="shuttlecock-img" alt="Shuttlecock">
+            </div>
             <div class="product-name">SG-10</div>
             <div class="product-retail" data-i18n="retail">Retail: $42.00</div>
             <div class="product-token">$27.00</div>
             <div class="product-token-label" data-i18n="token_price">with Token</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🏸</div>
+             <div  style="margin-bottom: 12px;">
+              <img src="shuttlecock-vertical-48.png" class="shuttlecock-img" alt="Shuttlecock">
+            </div>
             <div class="product-name">SG-20</div>
             <div class="product-retail" data-i18n="retail2">Retail: $44.90</div>
             <div class="product-token">$29.90</div>
             <div class="product-token-label" data-i18n="token_price">with Token</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🏸</div>
+             <div  style="margin-bottom: 12px;">
+              <img src="shuttlecock-vertical-48.png" class="shuttlecock-img" alt="Shuttlecock">
+            </div>
             <div class="product-name">SG-30</div>
             <div class="product-retail" data-i18n="retail3">Retail: $47.00</div>
             <div class="product-token">$32.00</div>
             <div class="product-token-label" data-i18n="token_price">with Token</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🏸</div>
+             <div  style="margin-bottom: 12px;">
+              <img src="shuttlecock-vertical-48.png" class="shuttlecock-img" alt="Shuttlecock">
+            </div>
             <div class="product-name">SG-50</div>
             <div class="product-retail" data-i18n="retail4">Retail: $49.90</div>
             <div class="product-token">$35.00</div>
@@ -1000,31 +1033,39 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
 
       <!-- Pickleball Tab -->
       <div class="tab-content" id="tab_pickleball_content">
-        <h3 class="shop-section-title" data-i18n="shop_paddles">🔍 Paddles</h3>
+        <h3 class="shop-section-title" data-i18n="shop_paddles"><img src="pickleball-small-200.png" class="pickleball-img" alt=""> Paddles</h3>
         <div class="products-grid">
           <div class="product-card fade-up">
-            <div class="product-emoji">🔍</div>
+            <div class="product-emoji">
+  <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+</div>
             <div class="product-name" data-i18n="pk1">Control Pro Paddle</div>
             <div class="product-retail">Retail: $89.00</div>
             <div class="product-token">$62.30</div>
             <div class="product-token-label" data-i18n="token_price">with Token (30% off)</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🔍</div>
+            <div class="product-emoji">
+  <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+</div>
             <div class="product-name" data-i18n="pk2">Power Drive Paddle</div>
             <div class="product-retail">Retail: $129.00</div>
             <div class="product-token">$90.30</div>
             <div class="product-token-label" data-i18n="token_price">with Token (30% off)</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🔍</div>
+            <div class="product-emoji">
+  <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+</div>
             <div class="product-name" data-i18n="pk3">Elite Carbon Paddle</div>
             <div class="product-retail">Retail: $189.00</div>
             <div class="product-token">$132.30</div>
             <div class="product-token-label" data-i18n="token_price">with Token (30% off)</div>
           </div>
           <div class="product-card fade-up">
-            <div class="product-emoji">🔍</div>
+            <div class="product-emoji">
+  <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
+</div>
             <div class="product-name" data-i18n="pk4">Junior Starter Paddle</div>
             <div class="product-retail">Retail: $49.00</div>
             <div class="product-token">$34.30</div>
@@ -1032,7 +1073,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
           </div>
         </div>
 
-        <h3 class="shop-section-title" data-i18n="shop_balls">🔍 Pickleballs</h3>
+        <h3 class="shop-section-title" data-i18n="shop_balls"> Pickleballs</h3>
         <div class="products-grid">
           <div class="product-card fade-up">
             <div class="product-emoji">🟡</div>
@@ -1284,8 +1325,8 @@ const i18n = {
     rewards_card_title:'ShuttleGo Tokens',rewards_card_sub:'Earn tokens through referrals and platform engagement. Use them to unlock the best prices on premium racket sport equipment.',
     token_register:'On Registration',token_refer:'Per Referral',token_gear:'Max Gear Discount',token_restring:'Max Restring Discount',
     shop_label:'Equipment Store',shop_title:'Gear Shop',shop_sub:'Premium equipment at the best prices. Use Tokens for maximum savings.',
-    tab_bad:'🏸 Badminton',tab_pick:'🔍 Pickleball',
-    shop_shuttles:'🏸 Shuttlecocks',shop_restring:'🎾 Restringing Services',shop_paddles:'🔍 Paddles',shop_balls:'🔍 Pickleballs',
+    tab_bad:'Badminton',tab_pick:'Pickleball',
+    shop_shuttles:'Shuttlecocks',shop_restring:'Restringing Services',shop_paddles:'Paddles',shop_balls:'Pickleballs',
     retail:'Retail: $42.00',retail2:'Retail: $44.90',retail3:'Retail: $47.00',retail4:'Retail: $49.90',
     token_price:'with Token',
     rs1:'Labour Only (BYO String)',rs2:'General String',rs3:'Yonex String (BG65, BG80 etc.)',rs4:'Grommet Replacement',
@@ -1325,8 +1366,8 @@ const i18n = {
     rewards_card_title:'ShuttleGo Token',rewards_card_sub:'通过邀请好友和参与平台活动获得Token，用于解锁最低价格的优质球拍运动装备。',
     token_register:'注册奖励',token_refer:'每次成功邀请',token_gear:'装备最高折扣',token_restring:'穿线最高折扣',
     shop_label:'装备商城',shop_title:'装备商城',shop_sub:'优质装备，最优价格。使用Token享受最大优惠。',
-    tab_bad:'🏸 羽毛球',tab_pick:'🔍 匹克球',
-    shop_shuttles:'🏸 羽毛球',shop_restring:'🎾 穿线服务',shop_paddles:'🔍 球拍',shop_balls:'🔍 匹克球',
+    tab_bad:'羽毛球',tab_pick:'匹克球',
+    shop_shuttles:'羽毛球',shop_restring:'穿线服务',shop_paddles:'球拍',shop_balls:'匹克球',
     retail:'零售价：$42.00',retail2:'零售价：$44.90',retail3:'零售价：$47.00',retail4:'零售价：$49.90',
     token_price:'Token最优惠价',
     rs1:'纯人工（自带线）',rs2:'通用线穿线',rs3:'Yonex线穿线（BG65、BG80等）',rs4:'换护线管',
