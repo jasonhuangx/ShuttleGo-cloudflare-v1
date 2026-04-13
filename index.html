@@ -678,7 +678,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
               <button class="carousel-dot active clickable" onclick="goSlide('s',0)"></button>
               <button class="carousel-dot clickable" onclick="goSlide('s',1)"></button>
               <button class="carousel-arrow clickable" onclick="slideMap('s',1)">›</button>
-              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_s_label">Sydney · Badminton Activies</span>
+              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_label">Sydney · Badminton Activies</span>
             </div>
           </div>
         </div>
@@ -757,7 +757,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
               <button class="carousel-dot active clickable" onclick="goSlide('v',0)"></button>
               <button class="carousel-dot clickable" onclick="goSlide('v',1)"></button>
               <button class="carousel-arrow clickable" onclick="slideMap('v',1)">›</button>
-              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_v_label">Adelaide · Badminton Venues</span>
+              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_a_label">Adelaide · Badminton Venues</span>
             </div>
           </div>
         </div>
@@ -1447,6 +1447,9 @@ function goSlide(key,idx){
   slideIdx[key]=idx;
 }
 function slideMap(key,dir){
+  console.log('s slides:', document.querySelectorAll('[id^="slide_s"]').length);
+console.log('v slides:', document.querySelectorAll('[id^="slide_v"]').length);
+console.log('slideIdx:', slideIdx);
   const slides = document.querySelectorAll(`[id^="slide_${key}"]`);
   let next = (slideIdx[key]+dir+slides.length)%slides.length;
   goSlide(key,next);
