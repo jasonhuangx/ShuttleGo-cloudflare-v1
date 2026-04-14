@@ -701,7 +701,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
               <button class="carousel-dot active clickable" onclick="goSlide('s',0)"></button>
               <button class="carousel-dot clickable" onclick="goSlide('s',1)"></button>
               <button class="carousel-arrow clickable" onclick="slideMap('s',1)">›</button>
-              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_label">Sydney · Badminton Activities</span>
+              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="s_slide_label">Sydney · Badminton Activities</span>
             </div>
           </div>
         </div>
@@ -780,7 +780,7 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
               <button class="carousel-dot active clickable" onclick="goSlide('v',0)"></button>
               <button class="carousel-dot clickable" onclick="goSlide('v',1)"></button>
               <button class="carousel-arrow clickable" onclick="slideMap('v',1)">›</button>
-              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="slide_a_label">Adelaide · Badminton Venues</span>
+              <span style="font-size:0.72rem;color:var(--text-light);margin-left:8px;" id="v_slide_label">Adelaide · Badminton Venues</span>
             </div>
           </div>
         </div>
@@ -1482,7 +1482,7 @@ const slideIdx = {s:0, v:0};
 function goSlide(key,idx){
   const slides = document.querySelectorAll(`[id^="slide_${key}"]`);
   slides.forEach((s,i)=>s.classList.toggle('active',i===idx));
-  const label = document.getElementById(`slide_${key}_label`);
+  const label = document.getElementById(`${key}_slide_label`);
   if(label) label.textContent = slideLabels[key][idx]||'';
   slides[0]?.closest('.feature-body')?.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
   slideIdx[key]=idx;
