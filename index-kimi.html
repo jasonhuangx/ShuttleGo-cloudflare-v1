@@ -634,8 +634,8 @@ footer .footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-w
         <!-- Feature 1: Session Finder -->
         <div class="feature-card fade-up">
           <div class="feature-header">
-            <div class="feature-icon orange" id="s_feature_icon">
-              <span id="s_icon_content" style="font-size:1.6rem;">🏸</span>
+            <div class="feature-icon orange">
+              <img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">
             </div>
             <div class="feature-title" data-i18n="f1_title">Session Finder</div>
             <div class="feature-desc" data-i18n="f1_desc">Find nearby badminton and pickleball sessions in real time. Filter by skill level, distance, date, and sport type.</div>
@@ -1486,17 +1486,6 @@ function goSlide(key,idx){
   const label = document.getElementById(`${key}_slide_label`);
   if(label) label.textContent = slideLabels[key][idx]||'';
   slides[0]?.closest('.feature-body')?.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active',i===idx));
-  // Update Session Finder icon based on slide
-  if(key==='s'){
-    const iconContent = document.getElementById('s_icon_content');
-    if(iconContent){
-      if(idx===0){
-        iconContent.textContent = '🏸';
-      } else {
-        iconContent.innerHTML = '<img src="pickleball-small-200.png" class="pickleball-img" alt="Pickleball">';
-      }
-    }
-  }
   slideIdx[key]=idx;
 }
 function slideMap(key,dir){
